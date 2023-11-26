@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 375px) {
+    .card {
+        width: 345px;
+        height: 610px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 240px 370px;
+    }
+
+    .card-image {
+        max-height: 240px;
+    }
+
+    .card-content {
+        padding: 25px !important;
+    }
+
+    h5 {
+        height: unset !important;
+    }
+
+    h4 {
+        height: unset !important;
+        line-height: unset !important;
+    }
+
+    p {
+        height: unset !important;
+    }
+
+    button {
+        padding: 10px 0;
+    }
+}
+
+.card-image {
+    height: 450px;
+}
+
+.card-content {
+    background-color: white;
+    display: grid;
+    padding: 33px 30px;
+}
+
+h5 {
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    height: 7px;
+}
+
+h4 {
+    color: hsl(212, 21%, 14%);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 32px;
+    height: 95px;
+    line-height: 1em;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5em;
+    height: 55px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.price-current {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 31px;
+    margin-right: 20px;
+}
+
+.price-previous {
+    color: hsl(228, 12%, 48%);
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+button:hover,
+button:active {
+    background-color: hsl(158, 46%, 17%);
+}
+
+embed {
+    margin-right: 10px;
+}
